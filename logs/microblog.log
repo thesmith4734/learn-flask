@@ -1,0 +1,54 @@
+2020-11-17 13:07:28,506 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-17 13:07:38,316 ERROR: Exception on /edit_profile [GET] [in /Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/gregsmith/code/flask/app/routes.py", line 81, in edit_profile
+    form = EditProfileForm()
+  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2020-11-17 13:11:30,830 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 13:37:22,641 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 13:37:36,563 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:24:29,396 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:24:41,371 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:25:14,973 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:25:35,817 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:42:28,834 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:43:06,824 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:51:45,691 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 14:52:10,569 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-20 15:07:32,987 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:47:56,834 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:49:23,957 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:49:34,294 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:49:48,167 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:50:00,957 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:50:13,358 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 12:52:48,647 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 13:00:19,800 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 13:01:20,402 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-25 13:08:19,948 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-27 12:26:17,720 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-27 12:29:03,052 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-27 13:06:49,097 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-28 15:55:12,458 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-29 16:56:38,483 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-29 17:24:26,714 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-29 17:33:13,142 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-29 17:52:16,385 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-30 14:02:02,186 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+2020-11-30 14:02:33,663 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
