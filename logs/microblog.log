@@ -1,54 +1,109 @@
-2020-11-17 13:07:28,506 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-17 13:07:38,316 ERROR: Exception on /edit_profile [GET] [in /Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py:1891]
+2021-02-07 22:04:43,992 ERROR: Exception on /reset_password_request [POST] [in /home/greg/.local/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "/usr/lib/python3.8/smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "/usr/lib/python3.8/smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/usr/lib/python3.8/smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "/usr/lib/python3.8/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/gregsmith/code/flask/app/routes.py", line 81, in edit_profile
-    form = EditProfileForm()
-  File "/Users/gregsmith/code/flask/flask_env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
-    return type.__call__(cls, *args, **kwargs)
-TypeError: __init__() missing 1 required positional argument: 'original_username'
-2020-11-17 13:11:30,830 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 13:37:22,641 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 13:37:36,563 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:24:29,396 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:24:41,371 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:25:14,973 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:25:35,817 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:42:28,834 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:43:06,824 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:51:45,691 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 14:52:10,569 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-20 15:07:32,987 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:47:56,834 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:49:23,957 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:49:34,294 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:49:48,167 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:50:00,957 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:50:13,358 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 12:52:48,647 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 13:00:19,800 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 13:01:20,402 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-25 13:08:19,948 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-27 12:26:17,720 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-27 12:29:03,052 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-27 13:06:49,097 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-28 15:55:12,458 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-29 16:56:38,483 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-29 17:24:26,714 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-29 17:33:13,142 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-29 17:52:16,385 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-30 14:02:02,186 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
-2020-11-30 14:02:33,663 INFO: Microblog startup [in /Users/gregsmith/code/flask/app/__init__.py:44]
+  File "/home/greg/code/learn-flask/app/routes.py", line 164, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/greg/code/learn-flask/app/email.py", line 13, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/home/greg/code/learn-flask/app/email.py", line 9, in send_email
+    mail.send(msg)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "/usr/lib/python3.8/smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "/usr/lib/python3.8/smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "/usr/lib/python3.8/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2021-02-07 22:15:20,648 ERROR: Exception on /reset_password_request [POST] [in /home/greg/.local/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "/usr/lib/python3.8/smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "/usr/lib/python3.8/smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/usr/lib/python3.8/smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "/usr/lib/python3.8/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/greg/.local/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/greg/code/learn-flask/app/routes.py", line 164, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/greg/code/learn-flask/app/email.py", line 13, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/home/greg/code/learn-flask/app/email.py", line 9, in send_email
+    mail.send(msg)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/greg/.local/lib/python3.8/site-packages/flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "/usr/lib/python3.8/smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "/usr/lib/python3.8/smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "/usr/lib/python3.8/smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "/usr/lib/python3.8/smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+2021-02-08 14:46:32,048 INFO: Microblog startup [in /home/greg/code/learn-flask/app/__init__.py:48]
