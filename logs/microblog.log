@@ -107,3 +107,4 @@ Traceback (most recent call last):
     raise SMTPServerDisconnected('please run connect() first')
 smtplib.SMTPServerDisconnected: please run connect() first
 2021-02-08 14:46:32,048 INFO: Microblog startup [in /home/greg/code/learn-flask/app/__init__.py:48]
+2021-02-08 23:40:03,924 INFO: Microblog startup [in /home/greg/code/learn-flask/app/__init__.py:50]
